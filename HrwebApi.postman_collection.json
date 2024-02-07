@@ -1,0 +1,203 @@
+{
+	"info": {
+		"_postman_id": "281d8ddb-5d8d-43ac-90a1-b6d04beac78c",
+		"name": "HrwebApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5955730"
+	},
+	"item": [
+		{
+			"name": "Register Tenant",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"CompanyExample1\",\r\n  \"password\": \"companyExample01!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hrwebapi20240206.azurewebsites.net/Authentication/registerTenant",
+					"protocol": "https",
+					"host": [
+						"hrwebapi20240206",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"Authentication",
+						"registerTenant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"CompanyExample1\",\r\n  \"password\": \"companyExample01!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hrwebapi20240206.azurewebsites.net/Authentication/login",
+					"protocol": "https",
+					"host": [
+						"hrwebapi20240206",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"Authentication",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UploadFileToBlob",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiQ29tcGFueUV4YW1wbGUxIiwiVGVuYW50SWQiOiIwOGIwNmYzMC02YWY3LTRmMDQtOWVhYS05YjcyOWMzMDA3ODciLCJqdGkiOiI5Y2Y5NjlhOS04ZmU0LTQ2ZjQtYTkzNi0yMDZmNWM1ZWZkODgiLCJleHAiOjE3MDczMDQxODUsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NjE5NTUiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjUwMDEifQ.usbl4hzp4u3i1T-2HTTTMGTumt_0aGnIuvBWfcJM2xU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "FileData",
+							"type": "file",
+							"src": "/D:/Iulia/Learning/HrwebApiResources/streamExample.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://hrwebapi20240206.azurewebsites.net/Upload/UploadFileToBlob",
+					"protocol": "https",
+					"host": [
+						"hrwebapi20240206",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"Upload",
+						"UploadFileToBlob"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload/GetStatus",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiQ29tcGFueUV4YW1wbGUxIiwiVGVuYW50SWQiOiIwOGIwNmYzMC02YWY3LTRmMDQtOWVhYS05YjcyOWMzMDA3ODciLCJqdGkiOiI5Y2Y5NjlhOS04ZmU0LTQ2ZjQtYTkzNi0yMDZmNWM1ZWZkODgiLCJleHAiOjE3MDczMDQxODUsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NjE5NTUiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjUwMDEifQ.usbl4hzp4u3i1T-2HTTTMGTumt_0aGnIuvBWfcJM2xU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\"67a35609-f37f-4408-a16c-50407a7d85b8\"",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hrwebapi20240206.azurewebsites.net/Upload/GetStatus",
+					"protocol": "https",
+					"host": [
+						"hrwebapi20240206",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"Upload",
+						"GetStatus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Employees/GetEmployee",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiQ29tcGFueUV4YW1wbGUxIiwiVGVuYW50SWQiOiIwOGIwNmYzMC02YWY3LTRmMDQtOWVhYS05YjcyOWMzMDA3ODciLCJqdGkiOiI5Y2Y5NjlhOS04ZmU0LTQ2ZjQtYTkzNi0yMDZmNWM1ZWZkODgiLCJleHAiOjE3MDczMDQxODUsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NjE5NTUiLCJhdWQiOiJodHRwOi8vbG9jYWxob3N0OjUwMDEifQ.usbl4hzp4u3i1T-2HTTTMGTumt_0aGnIuvBWfcJM2xU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "102",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hrwebapi20240206.azurewebsites.net/Employees/GetEmployee",
+					"protocol": "https",
+					"host": [
+						"hrwebapi20240206",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"Employees",
+						"GetEmployee"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
