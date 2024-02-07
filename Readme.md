@@ -52,7 +52,7 @@
 
 - All the secrets are stored in an Azure Key Vault.
 - The API secrets are retrived leverging the integration .Net Core IConfiguration with Azure Key Vault.
-- The Azure Function secrets are retrieved from from the Azure Key Vault via References in the AppSettings (Function Configuration in Portal)
+- The Azure Function secrets are retrieved from from the Azure Key Vault via References in the Azure AppSettings (Function Configuration in Portal)
 
 
 ### Known Issues
