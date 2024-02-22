@@ -77,6 +77,8 @@
 - **Additional CRUD Endpoints for Employee Management**: Extend the system's functionality by introducing additional endpoints for CRUD operations related to employee data.
 
 - **Infrastructure as Code:** Use Bicep, Pulumi or Terraform to provide an IaC approach. Right now, everything is manually deployed in Azure.
+  
+- **Background service:** Leverage background services instead of using Azure Functions for long-running tasks.
 
 #### Personal Note
 Easy to notice, this file was enchanced with some ChatGPT help - just to make things clearer and professional. 
