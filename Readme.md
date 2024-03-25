@@ -83,9 +83,6 @@
 
 - **Proper endpoint naming:** *UploadFileToBlob* - not the best name :( .
 
-
-Here's the corrected version:
-
 ### How to Use the Postman Collection
 
 - **Register Tenant**: Register a new tenant. Provide a name and a password.
