@@ -67,9 +67,6 @@
 
 - **Use of Simple String Instead of GUID**: The system employs simple strings where GUIDs should have been used, which can impact data integrity and uniqueness.
 
-- **GetEmployee input format:**: The user ID should be either retrieved from the query params or from a properly defined request body .
-
-
 ### Improvements
 
 - **Parallelization of ETL Processes**: Enhance system efficiency by implementing parallel processing for Extract, Transform, and Load operations, reducing overall processing time.
@@ -81,6 +78,22 @@
 - **Infrastructure as Code:** Use Bicep, Pulumi or Terraform to provide an IaC approach. Right now, everything is manually deployed in Azure.
   
 - **Background service:** Leverage background services instead of using Azure Functions for long-running tasks.
+
+- **Proper input and output format:** Properly format the input (classes/records for body or get some of the parameters out of the query params). Structure the responses as well in proper classes/records to avoid apparently meaningless responses (like the results of GetStatus and UploadFileToBlob endpoints)
+
+- **Proper endpoint naming:** *UploadFileToBlob* - not the best name :( .
+
+
+Here's the corrected version:
+
+### How to Use the Postman Collection
+
+- **Register Tenant**: Register a new tenant. Provide a name and a password.
+- **Login**: Provide the same credentials and retrieve the authentication token.
+#### From this point on, all requests should contain in the header the bearer token retrieved above.
+- **UploadFileToBlob**: Using the form-data option, upload a .csv file that respects the given structure. The returned plain GUID is the "job id". Use it in the next request.
+- **Upload/GetStatus**: Using the Job ID, retrieve the status of the job.
+- **Employees/GetEmployee**: When the job is done, request the details for a specific employee using the ID from the .csv.
 
 #### Personal Note
 Easy to notice, this file was enchanced with some ChatGPT help - just to make things clearer and professional. 
