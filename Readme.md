@@ -67,6 +67,8 @@
 
 - **Use of Simple String Instead of GUID**: The system employs simple strings where GUIDs should have been used, which can impact data integrity and uniqueness.
 
+- **GetEmployee input format:**: The user ID should be either retrieved from the query params or from a properly defined request body .
+
 
 ### Improvements
 
